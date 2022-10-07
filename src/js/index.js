@@ -4,7 +4,7 @@ export default class Validator {
   }
 
   validateUsername() {
-    const re = /^[a-zA-Z](?:[a-zA-Z0-9-_]*)[a-zA-Z]$/;
+    const re = /^[a-zA-Z](?:[\w-]*)[a-zA-Z]$/;
     if (re.test(this.nikName) === true) {
       if (/\d{3}(?!(\d))/.test(this.nikName) === true) return 'Неудачно: ник содержит более 3 подряд идущих цифр';
     } else {
